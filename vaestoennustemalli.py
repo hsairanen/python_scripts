@@ -35,3 +35,18 @@ plt.show()
 # Show the model
 print(model.coef_)
 print(model.intercept_)
+
+#%%
+
+# Predict a single given value
+
+pred_val = 2018
+
+val = poly.fit_transform(np.array([[pred_val]]).reshape((-1,1)))
+print(model.predict(val))
+
+# Predict a single given value
+
+pred = model.coef_[2]*pred_val**2 + model.coef_[1]*pred_val + model.intercept_
+print(pred)
+
