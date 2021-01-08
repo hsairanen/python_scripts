@@ -10,7 +10,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import matplotlib.pyplot as plt
 
-# Training data
+# Training data, Population in Finland 31.12. 
+# Datasource: Statistics Finland
 train_data = pd.DataFrame(np.array([[2010,5375276],[2011,5401267],[2012,5426674],[2013,5451270],[2014,5471753],[2015,5487308],[2016,5503297],[2017,5513130],[2018,5517919],[2019,5525292]]), columns=['Vuosi','Vaesto'])
 
 X = np.array(train_data['Vuosi']).reshape((-1,1))
@@ -40,7 +41,7 @@ print(model.intercept_)
 
 # Predict a single given value
 
-pred_val = 2018
+pred_val = 2019
 
 val = poly.fit_transform(np.array([[pred_val]]).reshape((-1,1)))
 print(model.predict(val))
