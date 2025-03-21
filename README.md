@@ -1,2 +1,2 @@
 # python_scripts
-Python code snippets
+All kinds of random Python scripts are stored here.
